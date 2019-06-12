@@ -10,5 +10,29 @@ for i in range(q):
             d.append(s)
             c+=1
     print(c)
+    
+#2 making anagrams
+
+s1=input()
+s2=input()
+n=0
+l=len(s1)+len(s2)
+for i in s1:
+    if(i in s2):
+        d=s1.count(i)
+        c=s2.count(i)
+        if(d<c):
+            s=d
+        else:
+            s=c
+        n+=2*s
+        s1=s1.replace(i,'')
+        s2=s2.replace(i,'')
+print(l-n)
+    
+
+            
+    
+
             
     
