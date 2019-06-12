@@ -1,0 +1,110 @@
+#1 label divi by another label
+
+def check_numbers(num1,num2):
+    num_list=set()
+    for i in range(num1,num2+1):
+        for j in range(num1,num2+1):
+            if(i%j==0 and i not in num_list and i!=j):
+                num_list.add(i)
+    count=len(num_list)
+    return [num_list,count]
+
+num1,num2=map(int,input().split())
+
+print(check_numbers(num1, num2))
+
+#3 reverse digit
+
+#include <stdio.h>
+int main()
+{
+    int n, a = 0, r;
+    scanf("%d", &n);
+
+    while(n != 0)
+    {
+        r = n%10;
+        a = a*10 + r;
+        n /= 10;
+    }
+
+    printf( "%d", a);
+
+    return 0;
+}
+
+#4  product digit
+
+n=int(input())
+p=1
+while(n!=0):
+    r=n%10
+    p*=r
+    n=n//10
+print(p)
+    
+#5 prime r not
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int a,f=0;;
+    scanf("%d",&a);
+    for(int i=2;i<=a/2;i++)
+    {
+        if(a%i==0)
+        {
+            printf("No");
+            f=1;
+            break;
+        }
+    }
+    if(f==0)
+    {
+        printf("Yes");
+    }
+
+        
+    return 0;
+}
+
+#6 armstrong r not
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,r;
+    scanf("%d",&n);
+    int a;
+    a=n;
+    int b=0,s=0;
+    while(a!=0)
+    {
+        a=a/10;
+        ++b;
+    }
+    a=n;
+    while(a!=0)
+    {
+        r=a%10;
+        s+=pow(r,b);
+        a=a/10;
+    }
+    if(s==n)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    return 0;
+}
