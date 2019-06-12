@@ -1,0 +1,20 @@
+#1 reverse str
+
+n=input()
+r=n[::-1]
+print(r)
+
+#2 freq of char
+
+from collections import Counter
+a=str(input())
+b=sorted(a)
+di=Counter(b)
+for i in di:
+    print(i,di[i])
+    
+#3 lower to upper
+
+n=input()
+s=n.upper()
+print(s)
