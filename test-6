@@ -72,7 +72,24 @@ int main()
     return 0;
 }
 
-#6 armstrong r not
+#6 fibbonosi sries
+
+#include <stdio.h>
+int main()
+{
+    int i, n, a = 0, b = 1, s;
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        printf("%d ", a);
+        s = a + b;
+        a = b;
+        b = s;
+    }
+    return 0;
+}
+
+#7 armstrong no
 
 #include <stdio.h>
 #include <string.h>
