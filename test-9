@@ -1,0 +1,14 @@
+#1 alternating numbers
+
+q=int(input())
+for i in range(q):
+    s=input()
+    d=[]
+    c=0
+    for i in range(0,len(s)-1):
+        if(s[i]==s[i+1]):
+            d.append(s)
+            c+=1
+    print(c)
+            
+    
