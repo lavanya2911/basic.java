@@ -1,0 +1,74 @@
+#1 len of the list
+
+
+def find_nine(nums):
+    for i in range(0,len(nums)):
+        if(nums[i]==9 and i<4):
+            return True
+    return False
+    
+
+nums=list(map(int,input().split()))
+print(find_nine(nums))
+
+#2 count char & int
+
+def countdigits(s):
+    l=[]
+    a=0
+    b=0
+    for i in s:
+        if(i>='a' and i<='z'):
+            a+=1
+        elif(i>='A' and i<='Z'):            
+            a+=1
+        elif(i>='0' and i<='9'):
+            b+=1
+   
+    l.append(a)
+    l.append(b)
+    return l
+
+s=input()
+print(countdigits(s))
+
+#3 sum of list
+
+def sum(l,n):
+    a=len(l)
+    r=0
+    for i in range(1,a-1):
+        if(l[i-1]!=n and l[i+1]!=n and l[i]!=n):
+            r+=l[i]
+    if(l[1]!=n and l[0]!=n):
+      r+=l[0]
+    if(l[a-2]!=n and l[a-1]!=n):
+        r+=l[a-1]
+    return r
+
+l=list(map(int,input().split()))
+n=int(input())
+print(sum(l,n))
+
+#4 list appear 123
+
+def check(l):
+    for i in range(0,len(l)-1):
+        if(l[i]==1 and l[i+1]==2 and l[i+2]==3):
+            return True
+    return False
+l=list(map(int,input().split()))
+print(check(l))
+
+#5 rotatete element n/2
+
+def exchange(l):
+    m=len(l)//2
+    d=[]
+    for i in range(len(l)-1,m-1,-1):
+        d.append(l[i])
+    for i in range(0,m):
+        d.append(l[i])
+    return d
+l=list(map(int,input().split()))
+print(*exchange(l))
