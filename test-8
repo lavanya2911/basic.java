@@ -1,0 +1,45 @@
+#1 armstrong interval
+
+n=int(input())
+m=int(input())
+for i in range(n,m+1):
+    t1=i
+    s=0
+    c=len(str(i))
+    while(i!=0):
+        r=i%10
+        s=s+(r**c)
+        i=i//10
+    if(t1==s):
+        print(t1)
+    
+#2 roman to int
+
+def num_to_roman(n):
+    l = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+    s = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+    r =''
+    i = 0
+    if n <5000:
+        while  n > 0:
+            for j in range(n // l[i]):
+                r += s[i]
+                n -=l[i]
+            i +=1
+    return r
+    
+n = int(input())
+print(num_to_roman(n))
+
+#3 no to roman
+
+a=input()
+d={'I' : 1,'V' : 5,'X' : 10,'L' : 50,'C' : 100,'D' : 500,'M' : 1000}
+s=0
+for i in range(len(a)):
+    if(i>0 and d[a[i]]>d[a[i-1]]):
+        s=s+d[a[i]]-2*d[a[i-1]]
+    else:
+        s=s+d[a[i]]
+print(s)
+            
